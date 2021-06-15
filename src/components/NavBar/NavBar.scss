@@ -1,0 +1,34 @@
+@import "../../global.scss";
+
+.navbar {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	z-index: 2;
+	background-color: black;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 30px;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		padding: 0 20px;
+		letter-spacing: 3px;
+	}
+
+	.logo {
+		margin-top: 5px;
+	}
+
+	&__links {
+		margin-top: 5px;
+
+		@include mobile {
+			display: none;
+		}
+	}
+}
