@@ -70,8 +70,9 @@
 }
 
 .bespoke {
-	background-image: url(../../Assets/Images/bd2.png);
+	background-image: url(../../Assets/Images/bd3.png);
 	background-size: cover;
+	background-position: center;
 	position: relative;
 	border-top: 1rem solid white;
 	border-bottom: 1rem solid white;
@@ -79,7 +80,7 @@
 
 .brainflix {
 	background-image: url(../../Assets/Images/flix.png);
-	background-position: bottom;
+	background-position: top;
 	background-size: cover;
 	position: relative;
 	border-bottom: 1rem solid black;
@@ -92,5 +93,5 @@
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	opacity: 0.6;
+	opacity: 0.8;
 }
