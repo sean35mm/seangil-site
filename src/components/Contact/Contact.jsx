@@ -1,6 +1,6 @@
-import React from "react";
-import "./Contact.scss";
-import resume from "../../Assets/Files/resume.pdf";
+import React from 'react';
+import './Contact.scss';
+import resume from '../../Assets/Files/resume.pdf';
 
 //Imgs
 // import github from "../../Assets/Images/github.png";
@@ -14,14 +14,22 @@ export default function Contact() {
 				<div className='contact__left'>
 					<h1>Connect with me</h1>
 					<div className='contact__socials'>
-						<a href='https://github.com/sean35mm'>
+						<a target='_blank' rel='noreferrer noopener' href='https://github.com/sean35mm'>
 							<b>- github.</b>
 						</a>
-						<a href='https://www.linkedin.com/in/seanhgil/'>
+						<a
+							target='_blank'
+							rel='noreferrer noopener'
+							href='https://www.linkedin.com/in/seanhgil/'
+						>
 							<b>- linkedin.</b>
 						</a>
-						<a href='https://www.instagram.com/seantographer/'>
-							<b>- instagram.</b>
+						<a
+							target='_blank'
+							rel='noreferrer noopener'
+							href='https://www.instagram.com/seantographer/'
+						>
+							<b>- photography.</b>
 						</a>
 					</div>
 				</div>
@@ -30,7 +38,7 @@ export default function Contact() {
 						I am always open to new opportunities and projects. Feel free to download my resume and
 						contact me.
 					</p>
-					<a href={resume}>
+					<a target='_blank' rel='noreferrer noopener' href={resume}>
 						<button>RESUME</button>
 					</a>
 				</div>

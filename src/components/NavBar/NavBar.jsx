@@ -1,5 +1,5 @@
-import React from "react";
-import "./NavBar.scss";
+import React from 'react';
+import './NavBar.scss';
 
 function NavBar() {
 	return (
@@ -11,7 +11,7 @@ function NavBar() {
 				<div className='navbar__links'>
 					<a href='#intro'>HOME</a>
 					<a href='#about'>ABOUT</a>
-					{/* <a href='#portfolio'>WORK</a> */}
+					<a href='#portfolio'>WORK</a>
 					<a href='#contact'>CONTACT</a>
 				</div>
 			</div>

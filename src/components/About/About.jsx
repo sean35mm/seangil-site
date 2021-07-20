@@ -1,20 +1,20 @@
-import React from "react";
-import "./About.scss";
+import React from 'react';
+import './About.scss';
 
-//Imgs
-import bootstrap from "../../Assets/Images/bootstrap.png";
-import css3 from "../../Assets/Images/css3.png";
-import firebase from "../../Assets/Images/firebase.png";
-import git from "../../Assets/Images/git.png";
-import heroku from "../../Assets/Images/heroku.png";
-import html from "../../Assets/Images/html.png";
-import javascript from "../../Assets/Images/javascript.png";
-import material from "../../Assets/Images/material.png";
-import mongodb from "../../Assets/Images/mongodb.png";
-import node from "../../Assets/Images/node.png";
-import postman from "../../Assets/Images/postman.png";
-import react from "../../Assets/Images/react.png";
-import sass from "../../Assets/Images/sass.png";
+// //Imgs
+// import bootstrap from '../../Assets/Images/bootstrap.png';
+// import css3 from '../../Assets/Images/css3.png';
+// import firebase from '../../Assets/Images/firebase.png';
+// import git from '../../Assets/Images/git.png';
+// import heroku from '../../Assets/Images/heroku.png';
+// import html from '../../Assets/Images/html.png';
+// import javascript from '../../Assets/Images/javascript.png';
+// import material from '../../Assets/Images/material.png';
+// import mongodb from '../../Assets/Images/mongodb.png';
+// import node from '../../Assets/Images/node.png';
+// import postman from '../../Assets/Images/postman.png';
+// import react from '../../Assets/Images/react.png';
+// import sass from '../../Assets/Images/sass.png';
 
 export default function About() {
 	return (
@@ -55,7 +55,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-				<div className='about__skills'>
+				{/* <div className='about__skills'>
 					<div>
 						<h3 className='about__text--title'>Skills &amp; Tools</h3>
 					</div>
@@ -113,7 +113,7 @@ export default function About() {
 							<p>Heroku</p>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

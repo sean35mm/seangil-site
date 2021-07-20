@@ -1,3 +1,96 @@
+@use '../../global.scss';
+
 .portfolio {
-	background-color: aqua;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Quicksand';
+
+	&__works {
+		text-align: center;
+		width: 100%;
+		height: 25rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background: black;
+		overflow: hidden;
+		z-index: 1;
+		// border-top: 1rem solid white;
+		// border-bottom: 1rem solid white;
+
+		&--title {
+			color: white;
+			z-index: 2;
+			font-size: 2rem;
+			font-family: 'Quicksand';
+		}
+
+		&--desc {
+			color: white;
+			z-index: 2;
+			font-size: 1.5rem;
+			font-family: 'Quicksand';
+		}
+
+		&--stack {
+			color: white;
+			z-index: 2;
+			font-size: 1rem;
+			font-family: 'Quicksand';
+		}
+
+		a {
+			margin-top: 1rem;
+			color: white;
+			z-index: 2;
+			// background-color: black;
+			padding: 1rem 2rem;
+			border-radius: 20px;
+			border: 2px solid white;
+			transition: 0.5s;
+
+			&:hover {
+				background-color: black;
+				border: 2px solid black;
+			}
+		}
+	}
+}
+
+// PROJECTS
+
+.instock {
+	background-image: url(../../Assets/Images/stock.png);
+	background-size: cover;
+	position: relative;
+	border-top: 1rem solid white;
+}
+
+.bespoke {
+	background-image: url(../../Assets/Images/bd2.png);
+	background-size: cover;
+	position: relative;
+	border-top: 1rem solid white;
+	border-bottom: 1rem solid white;
+}
+
+.brainflix {
+	background-image: url(../../Assets/Images/flix.png);
+	background-position: bottom;
+	background-size: cover;
+	position: relative;
+	border-bottom: 1rem solid black;
+}
+
+#color-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.6;
 }

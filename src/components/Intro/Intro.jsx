@@ -1,6 +1,6 @@
-import React from "react";
-import "./Intro.scss";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import React from 'react';
+import './Intro.scss';
+// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Intro() {
 	return (
@@ -23,9 +23,9 @@ export default function Intro() {
 					</li>
 				</ul>
 			</div>
-			<a href='#about'>
+			{/* <a href='#about'>
 				<ExpandMoreIcon fontSize='large' />
-			</a>
+			</a> */}
 		</div>
 	);
 }

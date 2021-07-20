@@ -1,14 +1,18 @@
 @use './global.scss' as *;
 
 .app {
-	height: 100vh;
+	height: 100%;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 
 	.sections {
 		width: 100%;
 		height: calc(100vh - 50px);
 		background-color: black;
-		position: relative;
-		top: 50px;
+		// position: relative;
+
 		scroll-behavior: smooth;
 		scrollbar-width: none; //for firefox
 		&::-webkit-scrollbar {
@@ -16,10 +20,15 @@
 		}
 		// scroll-snap-type: y mandatory;
 
-		> * {
-			width: 100vw;
-			height: calc(100vh - 50px);
-			// scroll-snap-align: end;
-		}
+		// > * {
+		// 	width: 100vw;
+		// 	height: calc(100vh - 50px);
+		// 	// scroll-snap-align: end;
+		// }
 	}
+}
+
+html {
+	margin: 0;
+	padding: 0;
 }

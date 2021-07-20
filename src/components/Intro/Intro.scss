@@ -1,4 +1,4 @@
-@import "../../global.scss";
+@import '../../global.scss';
 
 .intro {
 	background-color: black;
@@ -6,7 +6,8 @@
 
 	&__text {
 		margin-left: 20%;
-		margin-top: 15%;
+		margin-top: 10%;
+		margin-bottom: 15%;
 
 		@include mobile {
 			margin-left: 5%;
