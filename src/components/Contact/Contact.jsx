@@ -11,36 +11,37 @@ export default function Contact() {
 	return (
 		<div className='contact' id='contact'>
 			<div className='contact__container'>
-				<div className='contact__left'>
-					<h1>Connect with me</h1>
-					<div className='contact__socials'>
+				<p className='contact__title'>CONTACT</p>
+				<p className='contact__desc'>
+					I'm always available to discuss exciting projects. If you'd like to contact me, use one of
+					the links below or download my resume!
+				</p>
+
+				<div className='contact__main'>
+					<div className='contact__main--left'>
 						<a target='_blank' rel='noreferrer noopener' href='https://github.com/sean35mm'>
-							<b>- github.</b>
+							- github.
 						</a>
 						<a
 							target='_blank'
 							rel='noreferrer noopener'
 							href='https://www.linkedin.com/in/seanhgil/'
 						>
-							<b>- linkedin.</b>
+							- linkedin.
 						</a>
 						<a
 							target='_blank'
 							rel='noreferrer noopener'
 							href='https://www.instagram.com/seantographer/'
 						>
-							<b>- photography.</b>
+							- instagram.
 						</a>
 					</div>
-				</div>
-				<div className='contact__right'>
-					<p>
-						I am always open to new opportunities and projects. Feel free to download my resume and
-						contact me.
-					</p>
-					<a target='_blank' rel='noreferrer noopener' href={resume}>
-						<button>RESUME</button>
-					</a>
+					<div className='contact__main--right'>
+						<a target='_blank' rel='noreferrer noopener' href={resume}>
+							<button>RESUME</button>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

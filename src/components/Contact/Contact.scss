@@ -1,91 +1,89 @@
 @import '../../global.scss';
 
 .contact {
-	// background-image: url('../../Assets/Images/irisBG.jpg');
-	// background-repeat: no-repeat;
-	// background-size: cover;
-	color: white;
-	background-color: black;
-
-	h1 {
-		font-size: 3rem;
-	}
-
-	a {
-		padding: 1rem 0;
-		color: white;
-	}
-
-	&__socials {
-		padding-top: 1rem;
-		display: flex;
-		flex-direction: column;
-	}
+	background-color: white;
 
 	&__container {
+		margin: 5% 15% 5% 20%;
+
+		@include mobile {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+
+		@include tablet {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+	}
+
+	&__title {
+		letter-spacing: 3px;
+		font-weight: bold;
+		margin-bottom: 4rem;
+	}
+
+	&__desc {
+		font-size: 2rem;
+		margin-bottom: 4rem;
+		font-family: 'Helvetica';
+	}
+
+	&__main {
 		display: flex;
-		// width: 70%;
-		margin-left: 20%;
-		margin-top: 15%;
-		margin-right: 15%;
-		margin-bottom: 20%;
-		justify-content: space-between;
 
 		@include mobile {
 			flex-direction: column;
 		}
 
 		@include tablet {
-			width: 100%;
-			margin-left: 10%;
-			margin-right: 10%;
-		}
-	}
-
-	&__right {
-		width: 100%;
-		height: 300px;
-		padding-left: 4rem;
-
-		@include mobile {
-			margin-top: 4rem;
-			padding: 0;
-		}
-	}
-
-	p {
-		font-size: 1.5rem;
-
-		@include mobile {
-			font-size: 1rem;
-			padding-right: 2rem;
+			flex-direction: column;
 		}
 
-		@include tablet {
-			padding-right: 5rem;
+		&--left {
+			display: flex;
+			flex-direction: column;
+
+			a {
+				color: black;
+				margin: 1rem 0;
+				font-size: 1.5rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&--right {
+			margin-left: 50%;
+
+			@include mobile {
+				margin: 3rem 0;
+			}
+
+			@include tablet {
+				margin: 3rem 0;
+			}
 		}
 	}
 
 	button {
+		background-color: white;
+		border: 2px black solid;
+		font-family: 'Helvetica';
+		border-radius: 20px;
+		padding: 0.5rem 2rem;
 		width: 250px;
-		height: 50px;
-		margin-top: 6rem;
-		border-radius: 30px;
-		background-color: transparent;
-		border-color: white;
-		outline: none;
-		color: white;
-		border-style: solid;
-		font-family: Quicksand, sans-serif;
-		font-weight: 600;
+		font-family: 'Lato';
 		letter-spacing: 6px;
+		font-weight: 600;
 		font-size: 1rem;
-		transition: 0.5s;
 
 		&:hover {
-			background-color: white;
-			border-color: white;
-			color: black;
+			background-color: black;
+			color: white;
+			transition: 0.5s;
 		}
 	}
 }

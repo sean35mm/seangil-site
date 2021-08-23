@@ -25,7 +25,7 @@ export default function About() {
 				</div> */}
 				<div className='about__text'>
 					<div className='about__text-left'>
-						<h3 className='about__text--title'>About Me</h3>
+						<p className='about__text--title'>ABOUT ME</p>
 					</div>
 					<div className='about__text-right'>
 						<div className='about__paragraph1'>

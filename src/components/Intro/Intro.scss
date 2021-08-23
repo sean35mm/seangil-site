@@ -7,7 +7,7 @@
 	&__text {
 		margin-left: 20%;
 		margin-top: 10%;
-		margin-bottom: 15%;
+		margin-bottom: 10%;
 
 		@include mobile {
 			margin-left: 5%;
@@ -47,6 +47,7 @@
 
 .subheading {
 	letter-spacing: 3px;
+	font-weight: bold;
 }
 
 ul {

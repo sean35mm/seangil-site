@@ -1,6 +1,5 @@
 import React from 'react';
 import './Intro.scss';
-// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Intro() {
 	return (
@@ -19,13 +18,10 @@ export default function Intro() {
 					<li>2. US Army Veteran and former executive of an LA based startup</li>
 					<li>3. Currently consulting for financial firms and developing open source products.</li>
 					<li>
-						4. <span class='blink'>_</span>
+						4. <span class='blink'>__</span>
 					</li>
 				</ul>
 			</div>
-			{/* <a href='#about'>
-				<ExpandMoreIcon fontSize='large' />
-			</a> */}
 		</div>
 	);
 }

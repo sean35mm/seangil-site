@@ -9,10 +9,12 @@ function NavBar() {
 					<a href='#intro'>SG</a>
 				</div>
 				<div className='navbar__links'>
-					<a href='#intro'>HOME</a>
 					<a href='#about'>ABOUT</a>
 					<a href='#portfolio'>WORK</a>
 					<a href='#contact'>CONTACT</a>
+					<a target='_blank' rel='noreferrer noopener' href='https://medium.com/@sean35mm'>
+						BLOG
+					</a>
 				</div>
 			</div>
 		</div>
