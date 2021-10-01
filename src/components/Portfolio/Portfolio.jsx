@@ -10,9 +10,9 @@ export default function Portfolio() {
 			<div className='works' id='portfolio'>
 				<p className='works__title'>WORK</p>
 				<p className='work-skills'>
-					Skills/Tools: JavaScript (ES6+), HTML5, CSS3, Sass/Scss, React.js, Redux, MongoDB,
+					Skills/Tools: JavaScript (ES6+), HTML5, CSS3, Sass/Scss, React.js, NEXT.js, Redux, MongoDB,
 					Node.js, Express.js, NoSQL, OAuth, bcrypt, NEXT.js, Firebase, Google Cloud, AWS Amplify,
-					DynamoDB, MaterialUI, Bootstrap, TailwindsCSS, Netlify, Heroku, Git
+					DynamoDB, MaterialUI, Bootstrap, TailwindCSS, Netlify, Heroku, Git
 				</p>
 			</div>
 			<div className='portfolio'>

@@ -15,8 +15,8 @@ export default function Intro() {
 				</h4>
 				<ul className='intro__def'>
 					<li>1. Software Developer, specializing in both front and back end development</li>
-					<li>2. US Army Veteran and former executive of an LA based startup</li>
-					<li>3. Currently consulting for financial firms and developing open source products.</li>
+					<li>2. US Army Veteran and former Senior Vice President of a financial services firm</li>
+					<li>3. Currently a full stack developer at Givinga based in Boston, MA</li>
 					<li>
 						4. <span class='blink'>__</span>
 					</li>

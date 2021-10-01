@@ -56,7 +56,7 @@ ul {
 }
 
 .blink {
-	animation: blink-animation 1s steps(5, start) infinite;
+	animation: blink-animation cubic-bezier(0.55, 0.055, 0.675, 0.19) steps(5, start) infinite;
 	-webkit-animation: blink-animation 1s steps(5, start) infinite;
 }
 @keyframes blink-animation {
