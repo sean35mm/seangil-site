@@ -15,6 +15,9 @@ function NavBar() {
 					<a target='_blank' rel='noreferrer noopener' href='https://medium.com/@sean35mm'>
 						BLOG
 					</a>
+					<a target='_blank' rel='noreferrer noopener' href='https://anchor.fm/ggoom'>
+						PODCAST
+					</a>
 				</div>
 			</div>
 		</div>
