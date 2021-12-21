@@ -40,7 +40,8 @@ export default function About() {
 								I am based in the Greater Los Angeles and Orange County area,
 								but have collaborated with engineers globally to deliver client
 								work. If you're interested in tech and career development, check
-								out my podcast, <a href='https://anchor.fm/ggoom'>GGOOM</a>,
+								out my podcast,{' '}
+								<a href='https://anchor.fm/lofitech'>LoFi Tech Podcast</a>,
 								where I post weekly shows!
 							</p>
 						</div>
