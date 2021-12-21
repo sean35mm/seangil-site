@@ -12,10 +12,18 @@ function NavBar() {
 					<a href='#about'>ABOUT</a>
 					<a href='#portfolio'>WORK</a>
 					<a href='#contact'>CONTACT</a>
-					<a target='_blank' rel='noreferrer noopener' href='https://medium.com/@sean35mm'>
+					<a
+						target='_blank'
+						rel='noreferrer noopener'
+						href='https://medium.com/@sean35mm'
+					>
 						BLOG
 					</a>
-					<a target='_blank' rel='noreferrer noopener' href='https://anchor.fm/ggoom'>
+					<a
+						target='_blank'
+						rel='noreferrer noopener'
+						href='https://anchor.fm/lofitech'
+					>
 						PODCAST
 					</a>
 				</div>
