@@ -36,9 +36,9 @@ export default function Contact() {
 						<a
 							target='_blank'
 							rel='noreferrer noopener'
-							href='https://anchor.fm/ggoom'
+							href='https://anchor.fm/lofitech'
 						>
-							- ggoom podcast.
+							- lofi tech podcast.
 						</a>
 						<a
 							target='_blank'
