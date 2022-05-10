@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.scss';
 import '../src/global.scss';
 //Components
