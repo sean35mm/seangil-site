@@ -11,12 +11,14 @@ type Props = {};
 
 const givinga = (props: Props) => {
 	return (
-		<div className='flex justify-center'>
-			<div className='mockup-window border bg-secondary w-11/12 m-4'>
+		<div className='flex justify-center bg-black'>
+			<div className='mockup-window bg-secondary w-11/12 m-4'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<h1 className='text-center'>Givinga</h1>
-						<Image alt='hero' src={givingaHero} />
+						<div className='flex justify-center'>
+							<Image alt='hero' src={givingaHero} />
+						</div>
 						<p className='text-center'>
 							Givinga provides 2 main applications, the admin panel and white label product.
 						</p>
@@ -41,7 +43,9 @@ const givinga = (props: Props) => {
 							engineering team, we decided it would be better to rewrite the entire application with
 							better architecture and clean, reusable code.
 						</p>
-						<Image alt='new architecture' src={givingaArch} />
+						<div className='flex justify-center'>
+							<Image alt='new architecture' src={givingaArch} />
+						</div>
 						<h2 className='underline'>Engineering Abstract</h2>
 						<h4>AppSync + GraphQL</h4>
 						<p>
@@ -106,11 +110,9 @@ const givinga = (props: Props) => {
 						</div>
 						<div className='divider'></div>
 						<div className='text-center'>
-							<p>Check out my next project!</p>
-							<Link href={'/givinga'}>
-								<button className='btn btn-primary'>
-									Next Project <BsArrowRight />
-								</button>
+							<p>Stay tuned for more!</p>
+							<Link href={'https://github.com/sean35mm'}>
+								<button className='btn btn-primary'>Checkout my GitHub!</button>
 							</Link>
 						</div>
 					</div>

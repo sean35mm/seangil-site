@@ -1,12 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 
-import photo from '../assets/photo.jpg';
+import photo from '../assets/photo-2.jpg';
+
+import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
+import { GrContactInfo } from 'react-icons/gr';
 
 function About() {
 	return (
 		<div className='prose text-center sm:w-1/4'>
-			<Image src={photo} width={250} height={200} alt='my photo' />
+			<Image src={photo} width={225} height={300} alt='my photo' />
 			<h3>Hello, I&apos;m Sean!</h3>
 			<p>US Army Veteran, Software Engineer, & Cat Dad</p>
 			<p>
@@ -23,6 +26,24 @@ function About() {
 				<a href='https://www.givinga.com/'>Givinga</a>, a FinTech firm with a mission to redefine
 				philanthropy by providing open access to modern tools and technology.
 			</p>
+			<nav className='flex justify-around p-2 border border-black rounded-lg'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://docs.google.com/document/d/1LR1nrSU6qsE9i5i5SKGlJUNgpLVNzyKes7GtToqBq4Y/edit?usp=sharing'
+				>
+					<GrContactInfo />
+				</a>
+				<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/seanhgil/'>
+					<BsLinkedin />
+				</a>
+				<a target='_blank' rel='noopener noreferrer' href='https://github.com/sean35mm'>
+					<BsGithub />
+				</a>
+				<a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/seantographer'>
+					<BsInstagram />
+				</a>
+			</nav>
 		</div>
 	);
 }

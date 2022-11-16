@@ -2,18 +2,20 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Nav from '../components/Nav';
+
 import logo from '../assets/ca-logo.png';
 import figma from '../assets/ca-figma.png';
 import architecture from '../assets/ca-arch.png';
 
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 
 type Props = {};
 
 const childappetite = (props: Props) => {
 	return (
-		<div className='flex justify-center'>
-			<div className='mockup-window border bg-secondary w-11/12 m-4'>
+		<div className='flex justify-center bg-black'>
+			<div className='mockup-window bg-secondary w-11/12 m-4'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<Image src={logo} alt='logo' width={700} height={450} />
@@ -150,6 +152,7 @@ const childappetite = (props: Props) => {
 						<div className='divider'></div>
 						<div className='text-center'>
 							<p>Check out my next project!</p>
+
 							<Link href={'/givinga'}>
 								<button className='btn btn-primary'>
 									Next Project <BsArrowRight />
