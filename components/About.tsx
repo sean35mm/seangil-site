@@ -4,7 +4,7 @@ import Image from 'next/image';
 import photo from '../assets/photo-2.jpg';
 
 import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
-import { GrContactInfo } from 'react-icons/gr';
+import { GrContactInfo, GrMedium } from 'react-icons/gr';
 
 function About() {
 	return (
@@ -42,6 +42,9 @@ function About() {
 				</a>
 				<a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/seantographer'>
 					<BsInstagram />
+				</a>
+				<a target='_blank' rel='noopener noreferrer' href='https://medium.com/@seanicus'>
+					<GrMedium />
 				</a>
 			</nav>
 		</div>
