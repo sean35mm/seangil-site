@@ -1,1 +1,0 @@
-@use './global.scss' as *;.app{height:100%}.app::-webkit-scrollbar{display:none}.app .sections{width:100%;height:calc(100vh - 50px);background-color:black;scroll-behavior:smooth;scrollbar-width:none}.app .sections::-webkit-scrollbar{display:none}html{margin:0;padding:0}

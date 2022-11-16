@@ -1,3 +1,5 @@
-#Sean Gil Portfolio Site
+## Sean Gil - Personal Website
 
-Hello and welcome to my portfolio site. I created this website with React.js and deployed it through Netlify.
+### Current site live seangil.com
+
+New development branch for complete redesign and architecture
