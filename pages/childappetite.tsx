@@ -1,16 +1,19 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import logo from '../assets/ca-logo.png';
 import figma from '../assets/ca-figma.png';
 import architecture from '../assets/ca-arch.png';
+
+import { BsArrowRight } from 'react-icons/bs';
 
 type Props = {};
 
 const childappetite = (props: Props) => {
 	return (
 		<div className='flex justify-center'>
-			<div className='mockup-window border bg-primary w-11/12 m-4'>
+			<div className='mockup-window border bg-secondary w-11/12 m-4'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<Image src={logo} alt='logo' width={700} height={450} />
@@ -123,6 +126,36 @@ const childappetite = (props: Props) => {
 							complex and large in size. Cloudinary allowed us to edit and transform the images on
 							demand - also free (for now)!
 						</p>
+
+						<div className='divider'></div>
+
+						<div className='text-center'>
+							<h3>Thanks for Reading!</h3>
+							<p>
+								It&apos;s my turn to listen this time around and I am incredibly excited to meet
+								you!
+							</p>
+							<p>
+								Shoot me an email or drop me a message on{' '}
+								<a
+									target='_blank'
+									rel='noopener noreferrer'
+									href='https://www.linkedin.com/in/seanhgil/'
+								>
+									LinkedIn
+								</a>
+								!
+							</p>
+						</div>
+						<div className='divider'></div>
+						<div className='text-center'>
+							<p>Check out my next project!</p>
+							<Link href={'/givinga'}>
+								<button className='btn btn-primary'>
+									Next Project <BsArrowRight />
+								</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
