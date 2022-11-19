@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Nav from '../components/Nav';
-
 import logo from '../assets/ca-logo.png';
 import figma from '../assets/ca-figma.png';
 import architecture from '../assets/ca-arch.png';
