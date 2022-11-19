@@ -14,7 +14,7 @@ type Props = {};
 
 const childappetite = (props: Props) => {
 	return (
-		<div className='flex justify-center bg-black'>
+		<div className='flex justify-center bg-neutral'>
 			<div className='mockup-window bg-secondary w-11/12 m-4'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
@@ -153,11 +153,18 @@ const childappetite = (props: Props) => {
 						<div className='text-center'>
 							<p>Check out my next project!</p>
 
-							<Link href={'/givinga'}>
-								<button className='btn btn-primary'>
-									Next Project <BsArrowRight />
-								</button>
-							</Link>
+							<div className='flex justify-center'>
+								<Link href={'/'}>
+									<button className='btn mx-2 btn-primary'>
+										Home
+									</button>
+								</Link>
+								<Link href={'/givinga'}>
+									<button className='btn mx-2 btn-primary'>
+										Next Project <BsArrowRight />
+									</button>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>
