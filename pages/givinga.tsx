@@ -1,11 +1,9 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import givingaHero from '../assets/givinga-hero.png';
 import givingaArch from '../assets/new-arch.png';
 
-import { BsArrowRight } from 'react-icons/bs';
 
 type Props = {};
 
