@@ -1,12 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import logo from '../assets/ca-logo.png';
-import figma from '../assets/ca-figma.png';
 import architecture from '../assets/ca-arch.png';
+import figma from '../assets/ca-figma.png';
+import logo from '../assets/ca-logo.png';
 
-import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 
 type Props = {};
 

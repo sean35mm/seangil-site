@@ -13,18 +13,50 @@ function About() {
 			<h3>Hello, I&apos;m Sean!</h3>
 			<p>US Army Veteran, Software Engineer, & Cat Dad</p>
 			<p>
-				By day, I am bringing art to life at{' '}
-				<span className='text-blue-500'>
-					<a href='https://childappetite.com/'>Child Appetite</a>
-				</span>{' '}
-				as a developer and mentoring STEM students at{' '}
-				<a href='https://streetwisepartners.org/'>StreetWise Partners</a>!
+				I am bringing art to life at{' '}
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://childappetite.com/'
+					className='font-bold text-primary'
+				>
+					Child Appetite
+				</a>{' '}
+				as a developer and I am a teaching assistant at{' '}
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://brainstation.io/'
+					className='font-bold text-primary'
+				>
+					BrainStation
+				</a>
+				!
 			</p>
-			<p>By night, I cooking, exploring all things tech, and working on projects.</p>
+			<p>
+				Also I am a STEM mentor at{' '}
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://streetwisepartners.org/'
+					className='font-bold text-primary'
+				>
+					StreetWise Partners
+				</a>
+				!
+			</p>
 			<p>
 				Most recently, I operated on both the front and back end at{' '}
-				<a href='https://www.givinga.com/'>Givinga</a>, a FinTech firm with a mission to redefine
-				philanthropy by providing open access to modern tools and technology.
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://www.givinga.com/'
+					className='font-bold text-primary'
+				>
+					Givinga
+				</a>
+				, a FinTech firm with a mission to redefine philanthropy by providing
+				open access to modern tools and technology.
 			</p>
 			<nav className='flex justify-around p-2 border border-black rounded-lg'>
 				<a
@@ -34,16 +66,32 @@ function About() {
 				>
 					<GrContactInfo />
 				</a>
-				<a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/seanhgil/'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://www.linkedin.com/in/seanhgil/'
+				>
 					<BsLinkedin />
 				</a>
-				<a target='_blank' rel='noopener noreferrer' href='https://github.com/sean35mm'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://github.com/sean35mm'
+				>
 					<BsGithub />
 				</a>
-				<a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/seantographer'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://www.instagram.com/seantographer'
+				>
 					<BsInstagram />
 				</a>
-				<a target='_blank' rel='noopener noreferrer' href='https://medium.com/@seanicus'>
+				<a
+					target='_blank'
+					rel='noopener noreferrer'
+					href='https://medium.com/@seanicus'
+				>
 					<GrMedium />
 				</a>
 			</nav>
