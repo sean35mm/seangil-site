@@ -8,11 +8,13 @@ export default function Home() {
 	return (
 		<main className='flex justify-center items-center min-h-screen'>
 			<div className='mockup-window border border-black bg-secondary m-4 w-11/12'>
-				<div className='sm:flex px-4 py-16 bg-base-200 justify-evenly'>
+				<div className='md:flex px-4 py-16 bg-base-200 justify-evenly'>
 					<About />
-					<ChildAppetiteBanner />
-					<GivingaBanner />
-					<GithubBanner />
+					<div className='mt-12 md:mt-0 md:flex sm:justify-evenly'>
+						<ChildAppetiteBanner />
+						<GivingaBanner />
+						<GithubBanner />
+					</div>
 				</div>
 			</div>
 			<ParticleComponent />

@@ -8,8 +8,8 @@ import { GrContactInfo, GrMedium } from 'react-icons/gr';
 
 function About() {
 	return (
-		<div className='prose text-center sm:w-1/4'>
-			<Image src={photo} width={225} height={300} alt='my photo' />
+		<div className='prose text-center md:w-1/4'>
+			<Image src={photo} width={225} height={300} alt='my photo' className='rounded-lg' />
 			<h3>Hello, I&apos;m Sean!</h3>
 			<p>US Army Veteran, Software Engineer, & Cat Dad</p>
 			<p>
