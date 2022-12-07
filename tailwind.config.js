@@ -5,6 +5,14 @@ module.exports = {
 		'./components/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
+		colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'white': '#ffffff',
+			'black': '#000000',
+      'secondary': '#D8D8D8',
+			'lime': '#DEF81D'
+		},
 		screens: {
       'sm': '400px',
       // => @media (min-width: 640px) { ... }
@@ -27,8 +35,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('daisyui'), require('@tailwindcss/typography')],
-	daisyui: {
-		themes: false
-	},
+	plugins: [require('@tailwindcss/typography')]
 };
