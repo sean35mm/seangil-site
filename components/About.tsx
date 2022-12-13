@@ -1,101 +1,42 @@
-import React from 'react';
 import Image from 'next/image';
-
+import { FiDownload, FiArrowUpRight } from 'react-icons/fi';
 import photo from '../assets/photo-2.jpg';
-
-import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
-import { GrContactInfo, GrMedium } from 'react-icons/gr';
 
 function About() {
 	return (
-		<div className='prose text-center md:w-1/4'>
-			<Image src={photo} width={225} height={300} alt='my photo' className='rounded-lg' />
-			<h3>Hello, I&apos;m Sean!</h3>
-			<p>US Army Veteran, Software Engineer, & Cat Dad</p>
-			<p>
-				I am bringing art to life at{' '}
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://childappetite.com/'
-					className='font-bold text-primary'
-				>
-					Child Appetite
-				</a>{' '}
-				as a developer and I am a teaching assistant at{' '}
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://brainstation.io/'
-					className='font-bold text-primary'
-				>
-					BrainStation
-				</a>
-				!
-			</p>
-			<p>
-				Also I am a STEM mentor at{' '}
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://streetwisepartners.org/'
-					className='font-bold text-primary'
-				>
-					StreetWise Partners
-				</a>
-				!
-			</p>
-			<p>
-				Most recently, I operated on both the front and back end at{' '}
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.givinga.com/'
-					className='font-bold text-primary'
-				>
-					Givinga
-				</a>
-				, a FinTech firm with a mission to redefine philanthropy by providing
-				open access to modern tools and technology.
-			</p>
-			<nav className='flex justify-around p-2 border border-black rounded-lg'>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://docs.google.com/document/d/1LR1nrSU6qsE9i5i5SKGlJUNgpLVNzyKes7GtToqBq4Y/edit?usp=sharing'
-				>
-					<GrContactInfo />
-				</a>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.linkedin.com/in/seanhgil/'
-				>
-					<BsLinkedin />
-				</a>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://github.com/sean35mm'
-				>
-					<BsGithub />
-				</a>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://www.instagram.com/seantographer'
-				>
-					<BsInstagram />
-				</a>
-				<a
-					target='_blank'
-					rel='noopener noreferrer'
-					href='https://medium.com/@seanicus'
-				>
-					<GrMedium />
-				</a>
-			</nav>
-		</div>
+		<section className='w-11/12 rounded-2xl p-8 md:p-14 lg:p-18 h-screen'>
+			<div className='flex flex-col md:flex-row'>
+				<Image
+					className='rounded-full'
+					src={photo}
+					objectFit='fill'
+					alt='photo'
+					width={559}
+					height={761}
+				/>
+
+				<div className='text-white md:w-3/4 md:ml-10 lg:mt-24 xl:mt-40 xl:w-4/6'>
+					<h1 className='text-4xl xl:text-6xl mb-4 mt-10 md:mt-0'>About me</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+						veritatis earum sunt, temporibus dicta numquam perspiciatis,
+						doloribus autem voluptates libero ab, voluptatibus enim incidunt est
+						in ex! Eaque, nostrum adipisci.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus magni quidem, vitae obcaecati necessitatibus illo nisi illum, eos dignissimos, tenetur hic porro itaque velit enim amet ipsam ipsa in nobis.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque debitis a dolor repellendus illum, quia totam voluptates, modi sint nulla fugit molestias, distinctio accusamus. Ex eaque facere voluptatem tempora tenetur.
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tempore, sed ipsa cum illum officiis aliquid voluptate fugit explicabo accusamus officia facere eos, et harum distinctio unde. Aperiam, incidunt earum!
+					</p>
+					<div className='mt-6 flex justify-start'>
+						<button className='btn'>
+							<FiDownload /> <span className='ml-2'>Resume</span>
+						</button>
+						<button className='btn mx-4'>
+							<FiArrowUpRight /> <span className='ml-2'>LinkedIn</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 	);
 }
 

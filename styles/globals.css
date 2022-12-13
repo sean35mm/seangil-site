@@ -13,3 +13,10 @@ html {
 main {
   padding: 1rem;
 }
+
+
+@layer components {
+	.btn {
+		@apply flex items-center bg-secondary text-black py-1 px-4 rounded-full hover:bg-lime;
+	}
+}

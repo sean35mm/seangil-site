@@ -2,9 +2,9 @@ import React from 'react';
 
 const Hero = () => {
 	return (
-		<section className='w-11/12 h-[703px] bg-secondary text-black rounded-2xl'>
-			<div className='md:flex justify-around p-8 md:p-24 lg:p-32 h-full'>
-				<h1 className='text-9xl flex items-start'>Hello,</h1>
+		<section className='w-11/12 h-[703px] bg-secondary text-black rounded-2xl p-8 md:p-24 lg:p-32'>
+			<div className='md:flex justify-around  h-full'>
+				<h1 className='text-8xl md:text-9xl flex items-start'>Hello,</h1>
 				<div className='flex items-end'>
 					<div className='mt-10 md:m-0'>
 						<h3 className='text-md'>I&apos;m</h3>
