@@ -1,10 +1,13 @@
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 type ProjectCardProps = {
-  photo: string
-  title: string
-  description: string
-	skills: string[]
+	photo: string;
+	title: string;
+	description: string;
+	skills: string[];
+	url: string;
 };
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -15,20 +18,19 @@ const ProjectCard = (props: ProjectCardProps) => {
 					{props.photo}
 				</div>
 				<div className='m-4 md:ml-8 md:w-1/2'>
-					<h3 className='text-4xl text-lime hover:text-white hover:underline mb-8'>
-						{props.title}
-					</h3>
-					<p>
-						{props.description}
-					</p>
+					<Link href={props.url}>
+						<h3 className='text-4xl text-lime hover:text-white hover:underline mb-8'>
+							{props.title}
+						</h3>
+					</Link>
+					<p className='my-2'>{props.description}</p>
 					<h4>Relevant Skills:</h4>
 					{props.skills.map((skill) => {
 						return (
-							
 							<ul key={props.title}>
 								<li>- {skill}</li>
 							</ul>
-						)
+						);
 					})}
 				</div>
 			</div>

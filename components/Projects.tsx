@@ -16,6 +16,7 @@ const Projects = () => {
 						title={project.title}
 						description={project.description}
             skills={project.skills}
+						url={project.url}
 					/>
 				);
 			})}

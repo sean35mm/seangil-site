@@ -9,8 +9,8 @@ type Props = {};
 
 const givinga = (props: Props) => {
 	return (
-		<div className='flex justify-center bg-neutral'>
-			<div className='mockup-window bg-secondary w-11/12 m-4'>
+		<div className='flex justify-center bg-black'>
+			<div className='bg-secondary rounded-2xl w-11/12 m-4'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<h1 className='text-center'>Givinga</h1>
@@ -122,10 +122,10 @@ const givinga = (props: Props) => {
 
 							<div className='flex justify-center'>
 								<Link href={'/'}>
-									<button className='btn mx-2 btn-primary'>Home</button>
+									<button className='btn border-black border-[1px]'>Home</button>
 								</Link>
 								<Link href={'https://github.com/sean35mm'}>
-									<button className='btn btn-primary'>
+									<button className='btn mx-4 border-black border-[1px]'>
 										Checkout my GitHub!
 									</button>
 								</Link>
