@@ -4,6 +4,7 @@ type ProjectCardProps = {
   photo: string
   title: string
   description: string
+	skills: string[]
 };
 
 const ProjectCard = (props: ProjectCardProps) => {
@@ -20,6 +21,15 @@ const ProjectCard = (props: ProjectCardProps) => {
 					<p>
 						{props.description}
 					</p>
+					<h4>Relevant Skills:</h4>
+					{props.skills.map((skill) => {
+						return (
+							
+							<ul key={props.title}>
+								<li>- {skill}</li>
+							</ul>
+						)
+					})}
 				</div>
 			</div>
 		</div>
