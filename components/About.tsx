@@ -4,7 +4,7 @@ import photo from '../assets/photo-2.jpg';
 
 function About() {
 	return (
-		<section className='w-11/12 rounded-2xl p-8 md:p-14 lg:p-18'>
+		<section className='w-11/12 rounded-2xl p-8 md:p-14 lg:p-18 my-20'>
 			<div className='flex flex-col md:flex-row'>
 				<Image
 					className='rounded-full'
