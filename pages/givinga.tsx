@@ -10,7 +10,7 @@ type Props = {};
 const givinga = (props: Props) => {
 	return (
 		<div className='flex justify-center bg-black'>
-			<div className='bg-secondary rounded-2xl w-11/12 m-4'>
+			<div className='bg-secondary rounded-2xl w-9/12 my-20'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<h1 className='text-center'>Givinga</h1>

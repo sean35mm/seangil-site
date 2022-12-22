@@ -1,7 +1,7 @@
 export const projects = [
 	{
 		title: 'Child Appetite LLC',
-		photo: 'ca-logo.png',
+		photo: 'ca-logo-black.png',
 		description:
 			'Bringing art to life with Los Angeles based artist Iris Kwon. Cofounder, Accountant, Developer.',
 		skills: ['Next.js', 'JavaScript', 'Hygraph', 'Stripe'],
@@ -15,9 +15,9 @@ export const projects = [
 		url: '/givinga',
 	},
 	{
-		title: 'test3',
+		title: 'Technica Race Wire',
 		photo: 'photo-2.jpg',
-		description: 'test',
+		description: 'Motorsport Wiring Specialist that focuses on bespoke design and manufacturing of high-end wiring harnesses.',
 		skills: ['node', 'javascript', 'rest API'],
 		url: '/',
 	},

@@ -12,7 +12,7 @@ type Props = {};
 const childappetite = (props: Props) => {
 	return (
 		<div className='flex justify-center bg-black'>
-			<div className='rounded-2xl w-11/12 m-4 bg-secondary'>
+			<div className='rounded-2xl w-9/12 my-20 bg-secondary'>
 				<div className='flex px-4 py-16 bg-base-200'>
 					<div className='prose max-w-none mx-auto'>
 						<Image src={logo} alt='logo' width={700} height={450} />
