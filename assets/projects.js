@@ -15,9 +15,10 @@ export const projects = [
 		url: '/givinga',
 	},
 	{
-		title: 'Technica Race Wire',
+		title: 'ActiveProspect',
 		photo: 'photo-2.jpg',
-		description: 'Motorsport Wiring Specialist that focuses on bespoke design and manufacturing of high-end wiring harnesses.',
+		description:
+			'Motorsport Wiring Specialist that focuses on bespoke design and manufacturing of high-end wiring harnesses.',
 		skills: ['node', 'javascript', 'rest API'],
 		url: '/',
 	},
