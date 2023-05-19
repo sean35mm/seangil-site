@@ -7,10 +7,6 @@ const Projects = () => {
 			<h1 className='text-white text-4xl xl:text-6xl md:ml-4 lg:ml-16'>
 				Projects
 			</h1>
-			<p className='text-secondary text-xs mt-4 italic md:ml-4 lg:ml-16'>
-				Here are some highlighted projects I&apos;ve worked on. You can find
-				more in my GitHub!
-			</p>
 			{projects.map((project) => {
 				return (
 					<ProjectCard

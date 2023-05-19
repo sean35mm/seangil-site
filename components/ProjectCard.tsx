@@ -11,14 +11,17 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = (props: ProjectCardProps) => {
+	console.log(props.photo);
 	return (
 		<div className='text-white mt-14 md:ml-36 lg:ml-52'>
 			<div className='flex flex-col md:flex-row justify-end items-center'>
-				<div className='w-[336px] h-[357px] bg-secondary rounded-2xl text-black'>
+				<div className='w-[400px] h-[400px] bg-secondary rounded-2xl text-black'>
 					<Image
-						src={`/public/images/ca-logo-black.png`}
-						layout='fill'
+						src={`/images/${props.photo}`}
+						layout='intrinsic'
 						alt='photo'
+						width={400}
+						height={400}
 					/>
 				</div>
 				<div className='m-4 md:ml-8 md:w-1/2'>
