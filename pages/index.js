@@ -6,7 +6,7 @@ import { FaFileDownload } from 'react-icons/fa';
 export default function Home() {
 	return (
 		<main className='bg-black flex justify-center items-center h-screen'>
-			<div className='mx-auto w-3/4 text-secondary tracking-wider'>
+			<div className='mx-auto sm:mx-4 text-secondary tracking-wider'>
 				<h1>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink>, a
