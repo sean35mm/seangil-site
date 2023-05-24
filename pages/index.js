@@ -9,7 +9,7 @@ export default function Home() {
 		<main className='bg-black flex justify-center items-center h-screen'>
 			<div className='mx-auto sm:mx-4 text-secondary tracking-wider'>
 				<div className='flex flex-col items-center mt-10'>
-					<Image src={logo} alt='logo' />
+					<Image src={logo} alt='logo' width={200} height={200} />
 				</div>
 				<h1>
 					Hi, I&apos;m{' '}
