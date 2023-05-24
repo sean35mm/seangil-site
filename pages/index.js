@@ -1,12 +1,16 @@
 import { CustomLink } from '../components/CustomLink';
 import Image from 'next/image';
 import resume from '../assets/resume.svg';
+import logo from '../assets/sg-logo.png';
 import { FaFileDownload } from 'react-icons/fa';
 
 export default function Home() {
 	return (
 		<main className='bg-black flex justify-center items-center h-screen'>
 			<div className='mx-auto sm:mx-4 text-secondary tracking-wider'>
+				<div className='flex flex-col items-center mt-10'>
+					<Image src={logo} alt='logo' />
+				</div>
 				<h1>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink>, a
