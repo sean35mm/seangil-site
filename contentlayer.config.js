@@ -1,5 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib/index.js'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
@@ -36,7 +36,7 @@ export const Doc = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-	contentDirPath: 'src/content',
+	contentDirPath: 'content',
 	documentTypes: [Doc],
 	mdx: {
 		remarkPlugins: [remarkGfm],
