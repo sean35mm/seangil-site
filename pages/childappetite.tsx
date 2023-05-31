@@ -1,13 +1,13 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
-import architecture from '../assets/ca-arch.png';
-import figma from '../assets/ca-figma.png';
-import logo from '../assets/ca-logo.png';
+import architecture from '../assets/ca-arch.png'
+import figma from '../assets/ca-figma.png'
+import logo from '../assets/ca-logo.png'
 
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs'
 
-type Props = {};
+type Props = {}
 
 const childappetite = (props: Props) => {
 	return (
@@ -180,7 +180,7 @@ const childappetite = (props: Props) => {
 				</div>
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default childappetite;
+export default childappetite
