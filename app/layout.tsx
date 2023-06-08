@@ -20,7 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang='en'>
 			<body
-				className={`antialiased min-h-screen bg-white dark:bg-black text-slate-900 dark:text-slate-50 ${font.className}`}
+				className={`antialiased min-h-screen bg-white dark:bg-black text-slate-900 dark:text-white ${font.className}`}
 			>
 				<ThemeProvider attribute='class' defaultTheme='system' enableSystem>
 					<div className='max-w-2xl mx-auto py-10 px-4'>
@@ -29,12 +29,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
 								<ModeToggle />
 								<nav className='ml-auto text-sm font-medium space-x-6'>
 									<Link href='/'>Home</Link>
-									<Link href='/about'>About</Link>
 									<Link href='/blog'>Blog</Link>
 								</nav>
 							</div>
 						</header>
-						<main>{children}</main>
+						<main className='flex justify-center items-center mt-10'>
+							{children}
+						</main>
 					</div>
 					<Analytics />
 				</ThemeProvider>
