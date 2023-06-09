@@ -1,7 +1,5 @@
-# Next.js + Contentlayer
+### Please check the "dev" branch for updates. Currently adding an epic blog feature with Next/MDX
 
-A template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.
-
-https://next-contentlayer.vercel.app
+### Current site live seangil.com
 
 
