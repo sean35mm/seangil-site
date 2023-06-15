@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<div className='prose dark:prose-invert'>
 			<div className='flex justify-center items-center'>
-				<Image src={logo} alt='logo' />
+				<Image src={logo} alt='logo' width={300} height={300} />
 			</div>
 			<div className='mx-auto tracking-wider'>
 				<div className='flex flex-col items-center mt-10'></div>
