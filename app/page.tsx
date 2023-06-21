@@ -14,24 +14,25 @@ export default function Home() {
 				<h4>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink> - Software
-					Engineer, Technical Consultant and US Army Veteran.
+					Engineer, Technical Consultant and Veteran.
 				</h4>
+				<hr />
 				<p>
-					Actively helping web dev become accessible for all at{' '}
-					<CustomLink url='https://brainstation.io'>BrainStation</CustomLink>{' '}
-					and giving back to the community through{' '}
-					<CustomLink url='https://veterati.com'>Veterati</CustomLink> and{' '}
+					I’m passionate about making web development accessible and currently
+					channel this drive at{' '}
+					<CustomLink url='https://brainstation.io'>BrainStation</CustomLink> as
+					a web development mentor. Off duty, you&rsquo;ll find me volunteering
+					through <CustomLink url='https://veterati.com'>Veterati</CustomLink>{' '}
+					and{' '}
 					<CustomLink url='https://streetwisepartners.org/'>
 						Streetwise Partners
 					</CustomLink>
 					.
 				</p>
 				<p>
-					Born and raised in Southern California, but currently residing in
-					Austin, TX with my beautiful wife and our two cats.
-				</p>
-				<p>
-					When I&apos;m not coding, I am either{' '}
+					Born and raised in Southern California, but now enjoy life in Austin,
+					TX with my beautiful wife and our two cats. When I&apos;m not coding,
+					I am either{' '}
 					<CustomLink url='https://www.tiktok.com/@giltypleasure'>
 						cooking
 					</CustomLink>{' '}
@@ -41,7 +42,7 @@ export default function Home() {
 				<p>
 					You can check out my projects on my{' '}
 					<CustomLink url='https://github.com/sean35mm'>Github</CustomLink> or
-					read my <CustomLink url='/blog'>blog</CustomLink> posts.
+					explore my thoughts on my <CustomLink url='/blog'>blog</CustomLink> .
 				</p>
 			</div>
 		</div>
