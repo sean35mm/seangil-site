@@ -14,7 +14,7 @@ export default function Home() {
 				<h4>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink> - Software
-					Engineer, Technical Consultant and Mentor.
+					Engineer, Technical Consultant and US Army Veteran.
 				</h4>
 				<p>
 					Actively helping web dev become accessible for all at{' '}
