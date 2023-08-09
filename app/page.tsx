@@ -14,9 +14,16 @@ export default function Home() {
 				<h4>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink> - Software
-					Engineer, Technical Consultant and Veteran.
+					Engineer, Tech Consultant and Army Veteran.
 				</h4>
-				<hr />
+				<p>
+					Currently solving problems for large enterprise and government
+					customers as a technical consultant and software engineer at{' '}
+					<CustomLink url={'https://npsols.com/'}>
+						Next Phase Solutions
+					</CustomLink>{' '}
+					based in Orlando, FL.
+				</p>
 				<p>
 					I’m passionate about making web development accessible and currently
 					channel this drive at{' '}

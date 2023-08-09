@@ -1,0 +1,46 @@
+---
+title: Technical Debt
+description: My experience with technical debt from different perspectives and scales
+date: 08-09-2023
+---
+
+If you're a software developer, you've probably heard of the term "technical debt". It's a metaphor that describes the consequences of poor software design decisions. It's a concept that's been around for a long time and I wanted to highlight my experience dealing with technical debt on different scales, from dealing with it in small startups to large enterprise customers.
+
+Dear reader, if I am going to be completely up front with you, I must say that my experience learning how to deal with and manage technical debt is very limited in comparison to others that I have worked with, so please take my words with a grain of salt.
+
+## Small Scale
+
+The first time I had to deal with any level of technical debt was a my first role as a developer. There were several legacy micro-frontends that required regular maintainance - think of it as a monolith that was broken up into smaller pieces. The codebase was written in an old version of React (class components only) and was a mess. There were no tests, no documentation, and no clear way to understand how the code worked. The original author of the code, though no longer with the company on a full-time basis, would have to regularly come back to fix unscrupulous bugs that only he could understand.
+
+Our solution? Rewrite the whole thing.
+How long did it take us to make the decision? 8 months.
+
+Yes, you heard that right. For 8 months since I came on board, we were debating whether or not we should rewrite the app or continue to maintain it. The biggest issue that the CTO struggled with to make the decision was the fact that the app was still generating tons of revenue for the company, and that rewriting it would take a lot of time and resources. Yes, the app was generating revenue, but it was slowly becoming more expensive and difficult to maintain. The original developer went back to grad school and became difficult to reach. Whenever I or anyone else in the company tried to handle an issue with the application, we'd break it further. It was a mess.
+
+Finally, after 8 months of deliberation, we committed to just rewriting it but at a cost. The CTO became extremely motivated after the app crashed during a eventful launch for a huge client. The crash brought severe financial consequences to the client, therefore us as well.
+
+Lesson learned? When a crucial part of your business relies on the availability of one individual, you won't be set up for any type of success long term. Honestly throughout the whole process, I felt a bit powerless. I knew through speaking with team members that pushing for a rewrite was probably the right thing to do, but since it was my first developer job and first time experiencing this, I kept my mouth shut and went along with the flow. That was the biggest mistake on my part. Be vocal about your concerns and don't be afraid to speak up. A good team will listen and provide feedback.
+
+That leads me to another instance of dealing with technical debt, this time at a much larger company.
+
+## Medium Scale
+
+This company was definitely not a startup and had mature engineering practices with multiple applications that generated millions in revenue. As time passed, much of the technology that they continued to utilize had either lost support or was no longer being maintained. For instance, our backend framwork version had last been upgraded since 2016. There were 2 major version updates since then, yet they had not upgraded anything because of the hiring costs associated AND again, I got the "it just works" response. Well, it works until it doesn't and the technical debt began to pile up.
+
+Thankfully, our team was very open, and we had regular discussions of the growing pile of technical debt and how we could address it. We felt like it would be worth while to discuss. As I mentioned before, I learned to be more vocal about my concerns and I was able to speak up and share my thoughts. The result of continuous discussion and communication was a clear, well communicated plan that would help us incrementally address the technical debt over a period of time. It wasn't instant, but it was a start and we were all hopeful of it's sucess.
+
+That was my first experience with tackling technical debt where I felt confident and hopeful, thanks to the consistent communication, effort, and engineering empathy that was present in the team.
+
+Lessons learned? An open and honest team culture is crucial to addresssing technical debt. Starting the conversation early allowed me to understand why we racked up technical debt in the first place, and it also provided context for the decisions that were made prior to my arrival. My predisposed opinions on why things were they way they were, were quickly thrown out the window. My employment was a step forward to addressing the technical debt, and I was happy to be a part of it, even if it was just a small part.
+
+## Large Scale
+
+This is where things get interesting. My experience up to 2023 had mainly revolved round SaaS products that had very specific use cases. This time, I was working with large enterprise accounts with strict enterprise software that had been around for decades. The inception of the software came from the 90s and is built on top of a legacy framework that is still supported, but barely and it is definitely on it's way out (as confirmed from insiders of that specific software company).
+
+Honestly, working with these large enterprise software tools is what got me thinking about technical debt in the first place. I had never experienced technical debt in this large of a scale. Taking lessons from prior experiences with technical debt, I've been trying to communicate my thoughts and concerns, but I do not believe I have done that effectively. I think I firstly need more context tech debt itself and how it has affected the business or industry thus far.
+
+If you have experience working with or building large enterprise tools, please reach out to me! I'd love to hear your thoughts and experiences.
+
+How should we approach this? Where do we start? What is a realistsic timeline for changes? Which clients can we implement changes with first? So many questions.
+
+Admittedly, I do not have any real solutions right now. The tech debt discussions haven't really started yet so I'm doing what I can to prepare for it. For now, I'll be as communicative as possible and document everything along the way. We will likely increment solutions little by little but for now, no plans. Once the wheel begins moving along, I'll be sure to update this post with my thoughts and experiences. Thank you for reading.
