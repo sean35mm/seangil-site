@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import './globals.css'
-import { Open_Sans } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Analytics } from '@/components/analytics'
 import { ModeToggle } from '@/components/mode-toggle'
 
-const font = Open_Sans({ subsets: ['latin'] })
+const font = Nunito_Sans({ subsets: ['latin'] })
 
 export const metadata = {
 	title: 'Sean Gil',
