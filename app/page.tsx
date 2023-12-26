@@ -18,11 +18,20 @@ export default function Home() {
 				</h4>
 				<p>
 					Currently solving problems for large enterprise and government
-					customers as a technical consultant and software engineer at{' '}
+					customers as a software engineer at{' '}
 					<CustomLink url={'https://npsols.com/'}>
 						Next Phase Solutions
 					</CustomLink>{' '}
 					based in Orlando, FL.
+				</p>
+				<p>
+					Most recently, I&apos;ve joined{' '}
+					<CustomLink url={'https://psychable.com'}>Psychable</CustomLink> as a
+					volunteer full stack engineer and webmaster. I am excited to
+					contribute to their mission of building a community dedicated to
+					empowering individuals through psychedelic-assisted therapy. At
+					Psychable, I&apos;ll be working alongside practitioners who are
+					committed to supporting this transformative journey.
 				</p>
 				<p>
 					I’m passionate about making web development accessible and currently
@@ -49,7 +58,7 @@ export default function Home() {
 				<p>
 					You can check out my projects on my{' '}
 					<CustomLink url='https://github.com/sean35mm'>Github</CustomLink> or
-					explore my thoughts on my <CustomLink url='/blog'>blog</CustomLink> .
+					explore my thoughts on my <CustomLink url='/blog'>blog</CustomLink>.
 				</p>
 			</div>
 		</div>
