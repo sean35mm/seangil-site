@@ -14,24 +14,20 @@ export default function Home() {
 				<h4>
 					Hi, I&apos;m{' '}
 					<CustomLink url='https://read.cv/seangil'>Sean</CustomLink> - Software
-					Engineer, Tech Consultant and Army Veteran.
+					Engineer, Technical Consultant and Army Veteran.
 				</h4>
+				<br />
 				<p>
-					Currently solving problems for large enterprise and government
-					customers as a software engineer at{' '}
+					Currently delivering the power of contextual intelligence with AI at{' '}
+					<CustomLink url='https://goperigon.com'>Perigon</CustomLink> based in Austin, TX. Need an API key? Catch me on <CustomLink url='https://www.linkedin.com/in/seanhgil/'>LinkedIn</CustomLink>!
+				</p>
+				<p>
+					Previously built and configured software solutions for large
+					enterprise and government customers as a software engineer at{' '}
 					<CustomLink url={'https://npsols.com/'}>
 						Next Phase Solutions
 					</CustomLink>{' '}
-					based in Orlando, FL.
-				</p>
-				<p>
-					Most recently, I&apos;ve joined{' '}
-					<CustomLink url={'https://psychable.com'}>Psychable</CustomLink> as a
-					volunteer full stack engineer and webmaster. I am excited to
-					contribute to their mission of building a community dedicated to
-					empowering individuals through psychedelic-assisted therapy. At
-					Psychable, I&apos;ll be working alongside practitioners who are
-					committed to supporting this transformative journey.
+					based in Orlando, FL. (Acquired by Naviant in 2024)
 				</p>
 				<p>
 					I’m passionate about making web development accessible and currently
