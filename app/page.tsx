@@ -1,22 +1,15 @@
 import { CustomLink } from '@/components/ui/CustomLink';
-import Image from 'next/image';
-
-import logo from 'public/sg-logo.png';
 
 export default function Home() {
   return (
-    <div className='prose dark:prose-invert'>
-      <div className='flex justify-center items-center'>
-        <Image src={logo} alt='logo' width={300} height={300} />
-      </div>
-      <div className='mx-auto tracking-wider'>
-        <div className='flex flex-col items-center mt-10'></div>
-        <h4>
-          Hi, I&apos;m{' '}
-          <CustomLink url='https://opencv.app/@sean'>Sean</CustomLink> -
+    <div>
+      <div className='mt-10 space-y-5 leading-relaxed'>
+        <h1 className='mt-6 text-3xl sm:text-4xl font-semibold tracking-tight'>
+          Sean Gil
+        </h1>
+        <p className='mt-3'>
           Software Engineer, Technical Consultant and Army Veteran.
-        </h4>
-        <br />
+        </p>
         <p>
           Currently delivering the power of contextual intelligence with AI at{' '}
           <CustomLink url='https://goperigon.com'>Perigon</CustomLink> based in
@@ -24,7 +17,7 @@ export default function Home() {
           <CustomLink url='https://www.linkedin.com/in/seanhgil/'>
             LinkedIn
           </CustomLink>
-          !
+          .
         </p>
         <p>
           Previously built and configured software solutions for large
@@ -55,7 +48,6 @@ export default function Home() {
           </CustomLink>{' '}
           or playing Overwatch with my wife and friends!
         </p>
-
         <p>
           You can check out my projects on my{' '}
           <CustomLink url='https://github.com/sean35mm'>Github</CustomLink> or

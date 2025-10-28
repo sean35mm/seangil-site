@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import './globals.css';
-import { Nunito_Sans } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
+import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@/components/analytics';
 import { ModeToggle } from '@/components/mode-toggle';
 
-const font = Nunito_Sans({ subsets: ['latin'] });
+const font = JetBrains_Mono({ subsets: ['latin'], display: 'swap' });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Sean Gil',
   description: "Sean Gil's personal website and blog",
 };
