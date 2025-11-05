@@ -5,22 +5,31 @@ export default function Home() {
     <div>
       <div className='mt-10 space-y-5 leading-relaxed'>
         <h1 className='mt-6 text-3xl sm:text-4xl font-semibold tracking-tight'>
-          Sean Gil
+          <CustomLink url='https://opencv.app/@sean'>Sean Gil</CustomLink>
         </h1>
         <p className='mt-3'>
           Software Engineer, Technical Consultant and Army Veteran.
         </p>
         <p>
-          Currently delivering the power of contextual intelligence with AI at{' '}
-          <CustomLink url='https://goperigon.com'>Perigon</CustomLink> based in
-          Austin, TX. Need an API key? Catch me on{' '}
+          I joined Hammer Media as a Senior Software Engineer, where I’ll be
+          focused on building resilient, scalable technology for their flagship
+          product,{' '}
+          <CustomLink url='https://dollarwise.com'>DollarWise</CustomLink>. For
+          updates, connect on{' '}
           <CustomLink url='https://www.linkedin.com/in/seanhgil/'>
             LinkedIn
           </CustomLink>
           .
         </p>
         <p>
-          Previously built and configured software solutions for large
+          Previously at{' '}
+          <CustomLink url='https://perigon.io'>Perigon</CustomLink>, we
+          delivered the power of contextual intelligence—turning real‑time news
+          and event data into actionable insights with AI‑driven pipelines and
+          developer‑friendly APIs.
+        </p>
+        <p>
+          Before that, I built and configured software solutions for large
           enterprise and government customers as a software engineer at{' '}
           <CustomLink url={'https://npsols.com/'}>
             Next Phase Solutions
@@ -41,12 +50,12 @@ export default function Home() {
         </p>
         <p>
           Born and raised in Southern California, but now enjoy life in Austin,
-          TX with my beautiful wife and our two cats. When I&apos;m not coding,
-          I am either{' '}
+          TX with my beautiful wife, son, and bombay cat. When I&apos;m not
+          coding, I am either{' '}
           <CustomLink url='https://www.tiktok.com/@giltypleasure'>
             cooking
           </CustomLink>{' '}
-          or playing Overwatch with my wife and friends!
+          or... who am I kidding, I AM CODING.
         </p>
         <p>
           You can check out my projects on my{' '}

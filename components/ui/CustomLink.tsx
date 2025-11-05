@@ -11,7 +11,7 @@ export const CustomLink = (props: Props) => {
       target='_blank'
       rel='noopener noreferrer'
       href={props.url}
-      className='dark:text-[#DEF81D] text-blue-500 underline underline-offset-2 dark:hover:text-white'
+      className='dark:text-[#DEF81D] text-slate-700 underline underline-offset-2 dark:hover:text-white'
     >
       {props.children}
     </a>
