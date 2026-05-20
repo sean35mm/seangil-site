@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source './**/*.{ts,tsx}';
+@source '../components/**/*.{ts,tsx}';
+@source '../content/**/*.{md,mdx}';

@@ -1,16 +1,14 @@
 import Image from 'next/image';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
 const components = {
   Image,
 };
 
 interface MdxProps {
-  code: string;
+  source: string;
 }
 
-export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
-
-  return <Component components={components} />;
+export function Mdx({ source }: MdxProps) {
+  return <MDXRemote source={source} components={components} />;
 }

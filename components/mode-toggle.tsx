@@ -6,6 +6,8 @@ import { useTheme } from 'next-themes';
 export function ModeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  // next-themes pattern: defer rendering until mounted to avoid hydration mismatch
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   React.useEffect(() => setMounted(true), []);
 
   return (

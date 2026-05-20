@@ -1,18 +1,12 @@
 import { notFound } from 'next/navigation';
-import { allPosts } from 'contentlayer/generated';
-
 import { Metadata } from 'next';
+import { getAllPosts } from '@/lib/posts';
 import { Mdx } from '@/components/mdx-components';
 
 async function getPostFromParams(params: { slug: string[] }) {
   const slug = params?.slug?.join('/');
-  const post = allPosts.find((post) => post.slugAsParams === slug);
-
-  if (!post) {
-    null;
-  }
-
-  return post;
+  const posts = await getAllPosts();
+  return posts.find((post) => post.slugAsParams === slug) ?? null;
 }
 
 export async function generateMetadata({
@@ -34,7 +28,8 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return allPosts.map((post) => ({
+  const posts = await getAllPosts();
+  return posts.map((post) => ({
     slug: post.slugAsParams.split('/'),
   }));
 }
@@ -60,7 +55,7 @@ export default async function PostPage({
         </p>
       )}
       <hr className='my-4' />
-      <Mdx code={post.body.code} />
+      <Mdx source={post.body} />
     </article>
   );
 }
