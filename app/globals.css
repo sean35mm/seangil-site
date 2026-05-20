@@ -6,3 +6,73 @@
 @source './**/*.{ts,tsx}';
 @source '../components/**/*.{ts,tsx}';
 @source '../content/**/*.{md,mdx}';
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-fg: #ececec;
+  --color-accent: #def81d;
+  --color-meta: #7ce5b0;
+  --color-border: #2a2a2a;
+  --color-dim: #6b6b6b;
+}
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-fg: #ececec;
+  --color-accent: #def81d;
+  --color-meta: #7ce5b0;
+  --color-border: #2a2a2a;
+  --color-dim: #6b6b6b;
+}
+
+:root.light {
+  --color-bg: #f4f1ea;
+  --color-fg: #1b1b18;
+  --color-accent: #5b6f00;
+  --color-meta: #6b7a3b;
+  --color-border: #d9d3c2;
+  --color-dim: #948b78;
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+body {
+  font-feature-settings: 'calt' 0, 'liga' 0;
+}
+
+@keyframes caret-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* shiki dual-theme: github-light-default by default, swap to dark under .dark */
+.shiki,
+.shiki span {
+  color: var(--shiki-light) !important;
+  background-color: var(--shiki-light-bg) !important;
+}
+:root:not(.light) .shiki,
+:root:not(.light) .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+.shiki {
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

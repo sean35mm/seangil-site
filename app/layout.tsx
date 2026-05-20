@@ -1,16 +1,21 @@
-import Link from 'next/link';
 import './globals.css';
 import { JetBrains_Mono } from 'next/font/google';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Analytics } from '@/components/analytics';
-import { ModeToggle } from '@/components/mode-toggle';
+import { TopBar } from '@/components/top-bar';
+import { StatusLine } from '@/components/status-line';
 
 const font = JetBrains_Mono({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Sean Gil',
   description: "Sean Gil's personal website and blog",
+  alternates: {
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
 };
 
 interface RootLayoutProps {
@@ -20,24 +25,13 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body
-        className={`antialiased min-h-screen bg-white dark:bg-black text-slate-900 dark:text-white ${font.className}`}
-      >
+      <body className={`antialiased min-h-screen flex flex-col ${font.className}`}>
         <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-          <div className='max-w-2xl mx-auto py-10 px-4'>
-            <header>
-              <div className='flex items-center justify-between'>
-                <ModeToggle />
-                <nav className='ml-auto text-sm font-medium space-x-6'>
-                  <Link href='/'>Home</Link>
-                  <Link href='/blog'>Blog</Link>
-                </nav>
-              </div>
-            </header>
-            <main className='flex justify-center items-center mt-10'>
-              {children}
-            </main>
-          </div>
+          <TopBar />
+          <main className='max-w-3xl w-full mx-auto px-4 py-10 flex-1'>
+            {children}
+          </main>
+          <StatusLine />
           <Analytics />
         </ThemeProvider>
       </body>

@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { getAllPosts } from '@/lib/posts';
 import { Mdx } from '@/components/mdx-components';
+import { Prompt } from '@/components/prompt';
+import { getAllPosts } from '@/lib/posts';
 
 async function getPostFromParams(params: { slug: string[] }) {
   const slug = params?.slug?.join('/');
@@ -47,15 +48,23 @@ export default async function PostPage({
   }
 
   return (
-    <article className='py-6 prose dark:prose-invert'>
-      <h1 className='mb-2'>{post.title}</h1>
-      {post.description && (
-        <p className='text-xl mt-0 text-slate-700 dark:text-slate-200'>
-          {post.description}
+    <article>
+      <Prompt cmd={`cat ~/blog/${post.slugAsParams}.mdx`} />
+      <header className='mb-6'>
+        <h1 className='text-2xl sm:text-3xl font-semibold tracking-tight'>
+          {post.title}
+        </h1>
+        {post.description && (
+          <p className='mt-2 text-(--color-dim)'>{post.description}</p>
+        )}
+        <p className='mt-2 text-xs text-(--color-meta) tabular-nums'>
+          {post.date.slice(0, 10)}
         </p>
-      )}
-      <hr className='my-4' />
-      <Mdx source={post.body} />
+      </header>
+      <hr className='border-(--color-border) mb-6' />
+      <div className='prose prose-invert max-w-none prose-headings:text-(--color-fg) prose-p:text-(--color-fg) prose-li:text-(--color-fg) prose-strong:text-(--color-fg) prose-a:text-(--color-accent) prose-a:no-underline hover:prose-a:underline prose-a:decoration-dotted prose-a:underline-offset-4 prose-hr:border-(--color-border) prose-code:text-(--color-meta) prose-code:before:content-none prose-code:after:content-none prose-blockquote:border-(--color-border) prose-blockquote:text-(--color-dim)'>
+        <Mdx source={post.body} />
+      </div>
     </article>
   );
 }
