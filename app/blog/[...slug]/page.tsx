@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
+import NextLink from 'next/link';
 import { Mdx } from '@/components/mdx-components';
 import { Prompt } from '@/components/prompt';
 import { getAllPosts } from '@/lib/posts';
@@ -49,6 +50,12 @@ export default async function PostPage({
 
   return (
     <article>
+      <NextLink
+        href='/blog'
+        className='inline-block text-sm text-(--color-dim) hover:text-(--color-accent) transition-colors mb-6'
+      >
+        cd ~/blog
+      </NextLink>
       <Prompt cmd={`cat ~/blog/${post.slugAsParams}.mdx`} />
       <header className='mb-6'>
         <h1 className='text-2xl sm:text-3xl font-semibold tracking-tight'>
