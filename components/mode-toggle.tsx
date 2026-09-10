@@ -10,24 +10,17 @@ export function ModeToggle() {
   // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
-  const label = mounted ? (resolvedTheme === 'light' ? 'dark' : 'light') : '';
+  const targetTheme = resolvedTheme === 'light' ? 'dark' : 'light';
+  const label = mounted ? `${targetTheme} mode` : 'theme';
 
   return (
     <button
       type='button'
-      onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')}
-      aria-label='toggle color mode'
-      className='inline-flex items-center justify-center min-w-[7ch] text-(--color-dim) hover:text-(--color-accent) transition-colors'
+      onClick={() => setTheme(targetTheme)}
+      aria-label={mounted ? `Switch to ${targetTheme} mode` : 'Change color theme'}
+      className='theme-toggle inline-flex min-h-10 min-w-[12ch] items-center justify-end rounded-sm px-1 text-sm text-(--color-dim) transition-colors duration-150 hover:text-(--color-fg)'
     >
-      <span aria-hidden='true' className='text-(--color-border)'>
-        [
-      </span>
-      <span className='inline-block w-[5ch] text-center tabular-nums'>
-        {label}
-      </span>
-      <span aria-hidden='true' className='text-(--color-border)'>
-        ]
-      </span>
+      <span className='inline-block w-[10ch] text-right'>{label}</span>
     </button>
   );
 }

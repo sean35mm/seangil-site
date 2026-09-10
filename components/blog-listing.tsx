@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import type { Post } from '@/lib/posts';
-
-function isoDate(d: string) {
-  return d.slice(0, 10);
-}
+import {
+  convertDateFormat,
+  convertDateToIso,
+} from '@/components/helpers/convertDateFormat';
 
 interface BlogListingProps {
   posts: Post[];
@@ -11,31 +11,27 @@ interface BlogListingProps {
 
 export function BlogListing({ posts }: BlogListingProps) {
   return (
-    <ul className='font-mono text-sm leading-relaxed'>
+    <ol className='writing-list'>
       {posts.map((post) => (
-        <li key={post.slug} className='py-3 border-b border-(--color-border) last:border-b-0'>
-          <div className='flex items-baseline gap-4'>
-            <span className='text-(--color-dim) tabular-nums shrink-0'>
-              {isoDate(post.date)}
-            </span>
+        <li key={post.slug} className='writing-item'>
+          <div className='min-w-0'>
             <Link
               href={post.slug}
-              className='text-(--color-accent) hover:underline decoration-dotted underline-offset-4'
+              className='writing-link rounded-sm text-base font-medium text-(--color-fg) underline decoration-(--color-link-line) underline-offset-4 transition-colors duration-150 hover:text-(--color-accent) hover:decoration-(--color-accent)'
             >
-              {post.slugAsParams}.mdx
+              {post.title}
             </Link>
+            {post.description && (
+              <p className='mt-2 max-w-[65ch] text-sm leading-relaxed text-(--color-dim)'>
+                {post.description}
+              </p>
+            )}
           </div>
-          <div className='mt-1 pl-[11ch] text-(--color-fg)'>
-            <span className='text-(--color-meta) mr-2'>→</span>
-            <span>{post.title}</span>
-          </div>
-          {post.description && (
-            <div className='pl-[11ch] text-(--color-dim) mt-0.5'>
-              {post.description}
-            </div>
-          )}
+          <time dateTime={convertDateToIso(post.date)} className='writing-date tabular-nums text-sm text-(--color-dim)'>
+            {convertDateFormat(post.date)}
+          </time>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 }

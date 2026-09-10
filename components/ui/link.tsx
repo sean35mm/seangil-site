@@ -8,7 +8,7 @@ interface LinkProps {
 }
 
 const baseClass =
-  'text-(--color-accent) underline decoration-dotted decoration-(--color-border) underline-offset-4 transition-colors hover:decoration-(--color-accent)';
+  'text-(--color-fg) underline decoration-(--color-link-line) underline-offset-4 transition-colors duration-150 hover:text-(--color-accent) hover:decoration-(--color-accent)';
 
 export function Link({ href, children, className }: LinkProps) {
   const isExternal = /^https?:\/\//.test(href);

@@ -1,18 +1,15 @@
 import { Link } from '@/components/ui/link';
-import { Prompt } from '@/components/prompt';
-
 export default function NotFound() {
   return (
-    <div className='space-y-4'>
-      <Prompt cmd='cd ./that-page' />
-      <pre className='text-(--color-fg) whitespace-pre-wrap font-mono text-sm'>
-{`bash: cd: ./that-page: No such file or directory
-exit status: 1`}
-      </pre>
-      <p className='text-(--color-dim) text-sm'>
-        That route doesn&rsquo;t exist. Try <Link href='/'>~</Link> or{' '}
-        <Link href='/blog'>~/blog</Link>.
+    <section aria-labelledby='not-found-heading' className='max-w-[60ch] pt-10 sm:pt-20'>
+      <p className='mb-3 text-sm text-(--color-dim)'>404</p>
+      <h1 id='not-found-heading' className='text-3xl sm:text-4xl font-semibold tracking-[-0.035em]'>
+        Page not found
+      </h1>
+      <p className='mt-5 leading-relaxed text-(--color-dim)'>
+        That address doesn&rsquo;t lead anywhere. Return <Link href='/'>home</Link>{' '}
+        or browse the <Link href='/blog'>writing archive</Link>.
       </p>
-    </div>
+    </section>
   );
 }

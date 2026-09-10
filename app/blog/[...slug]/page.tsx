@@ -2,7 +2,10 @@ import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import NextLink from 'next/link';
 import { Mdx } from '@/components/mdx-components';
-import { Prompt } from '@/components/prompt';
+import {
+  convertDateFormat,
+  convertDateToIso,
+} from '@/components/helpers/convertDateFormat';
 import { getAllPosts } from '@/lib/posts';
 
 async function getPostFromParams(params: { slug: string[] }) {
@@ -52,24 +55,22 @@ export default async function PostPage({
     <article>
       <NextLink
         href='/blog'
-        className='inline-block text-sm text-(--color-dim) hover:text-(--color-accent) transition-colors mb-6'
+        className='inline-block rounded-sm py-2 text-sm text-(--color-dim) underline decoration-(--color-link-line) underline-offset-4 transition-colors duration-150 hover:text-(--color-fg)'
       >
-        cd ~/blog
+        Back to writing
       </NextLink>
-      <Prompt cmd={`cat ~/blog/${post.slugAsParams}.mdx`} />
-      <header className='mb-6'>
-        <h1 className='text-2xl sm:text-3xl font-semibold tracking-tight'>
+      <header className='article-header max-w-[68ch]'>
+        <h1 className='text-3xl sm:text-4xl font-semibold tracking-[-0.035em] leading-tight text-pretty'>
           {post.title}
         </h1>
         {post.description && (
-          <p className='mt-2 text-(--color-dim)'>{post.description}</p>
+          <p className='mt-5 leading-relaxed text-(--color-dim)'>{post.description}</p>
         )}
-        <p className='mt-2 text-xs text-(--color-meta) tabular-nums'>
-          {post.date.slice(0, 10)}
-        </p>
+        <time dateTime={convertDateToIso(post.date)} className='mt-4 block text-sm text-(--color-dim) tabular-nums'>
+          {convertDateFormat(post.date)}
+        </time>
       </header>
-      <hr className='border-(--color-border) mb-6' />
-      <div className='prose prose-invert max-w-none prose-headings:text-(--color-fg) prose-p:text-(--color-fg) prose-li:text-(--color-fg) prose-strong:text-(--color-fg) prose-a:text-(--color-accent) prose-a:no-underline hover:prose-a:underline prose-a:decoration-dotted prose-a:underline-offset-4 prose-hr:border-(--color-border) prose-code:text-(--color-meta) prose-code:before:content-none prose-code:after:content-none prose-blockquote:border-(--color-border) prose-blockquote:text-(--color-dim)'>
+      <div className='article-body prose max-w-[70ch]'>
         <Mdx source={post.body} />
       </div>
     </article>

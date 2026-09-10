@@ -1,0 +1,211 @@
+.playground {
+  width: 100%;
+  min-width: 0;
+}
+
+.hardwareLine {
+  display: inline;
+}
+
+.trigger,
+.soundToggle {
+  border: 0;
+  padding: 0;
+  color: var(--color-fg);
+  font: inherit;
+  cursor: pointer;
+}
+
+.trigger {
+  background: transparent;
+  text-decoration: underline;
+  text-decoration-color: var(--color-link-line);
+  text-underline-offset: 0.28rem;
+}
+
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.tryIt {
+  margin-left: 0.45rem;
+  color: var(--color-dim);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.panel {
+  width: 100%;
+  min-width: 0;
+  margin-top: 0.85rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.85rem;
+}
+
+.inputLabel {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-dim);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  min-height: 3.65rem;
+  resize: vertical;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--color-bg) 94%, var(--color-fg));
+  padding: 0.55rem 0.65rem;
+  color: var(--color-fg);
+  font: inherit;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  caret-color: var(--color-accent);
+}
+
+.input::placeholder {
+  color: var(--color-dim);
+}
+
+.input:focus-visible,
+.keyboardScroll:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.controls {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0.55rem 0;
+}
+
+.instructions,
+.soundNote,
+.privacyNote,
+.scrollHint {
+  margin: 0;
+  color: var(--color-dim);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.soundToggle {
+  flex: none;
+  border-bottom: 1px solid var(--color-link-line);
+  background: transparent;
+  color: var(--color-dim);
+  font-size: 0.68rem;
+}
+
+.soundToggle[aria-pressed='true'] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.soundNote {
+  margin: -0.25rem 0 0.5rem;
+}
+
+.keyboardScroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 0.15rem 0 0.45rem;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.keyboard {
+  --unit: 2rem;
+  --gap: 0.22rem;
+  box-sizing: content-box;
+  width: calc(15 * var(--unit) + 14 * var(--gap));
+  border: 1px solid var(--color-border);
+  border-radius: 0.42rem;
+  background: color-mix(in srgb, var(--color-bg) 86%, var(--color-fg));
+  padding: 0.45rem;
+}
+
+.keyRow {
+  display: flex;
+  gap: var(--gap);
+}
+
+.keyRow + .keyRow {
+  margin-top: var(--gap);
+}
+
+.keyRow:last-child {
+  justify-content: center;
+}
+
+.key {
+  display: grid;
+  flex: 0 0 calc(var(--unit) * var(--key-width) + var(--gap) * (var(--key-width) - 1));
+  width: calc(var(--unit) * var(--key-width) + var(--gap) * (var(--key-width) - 1));
+  height: var(--unit);
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-border) 78%, var(--color-fg));
+  border-bottom-width: 2px;
+  border-radius: 0.24rem;
+  background: color-mix(in srgb, var(--color-bg) 92%, var(--color-fg));
+  color: var(--color-dim);
+  font: inherit;
+  font-size: 0.57rem;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 80ms ease, color 80ms ease, transform 80ms ease;
+}
+
+.key[data-pressed],
+.key:active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(1px);
+}
+
+.key:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.privacyNote {
+  margin-top: 0.45rem;
+}
+
+.scrollHint {
+  display: none;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 25rem) {
+  .controls {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .scrollHint {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .key {
+    transition: none;
+  }
+
+  .key[data-pressed],
+  .key:active {
+    transform: none;
+  }
+}

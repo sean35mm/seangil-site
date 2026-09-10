@@ -1,8 +1,8 @@
-import NextLink from 'next/link';
 import { Link } from '@/components/ui/link';
-import { Prompt } from '@/components/prompt';
-import { ModeToggle } from '@/components/mode-toggle';
 import { CompanyPopover } from '@/components/company-popover';
+import { KeyboardPlayground } from '@/components/keyboard-playground';
+import { SelectedProjects } from '@/components/selected-projects';
+import type { ReactNode } from 'react';
 
 const work: { year: string; role: string; org: string; blurb: string }[] = [
   {
@@ -62,109 +62,90 @@ const work: { year: string; role: string; org: string; blurb: string }[] = [
   },
   {
     year: '2011–19',
-    role: 'HUMINT Collector',
+    role: 'Human Intelligence Collector',
     org: 'U.S. Army',
     blurb:
       'Served as a Human Intelligence (HUMINT) Collector, 314th Military Intelligence Battalion.',
   },
 ];
 
-const tools: [string, string][] = [
-  ['machine', 'macOS · Fedora · zsh · cmux · Ghostty'],
+const tools: [string, ReactNode][] = [
+  ['machine', 'macOS · Omarchy · zsh · cmux · Ghostty'],
   ['editor', 'Zed · JetBrains Mono'],
-  ['ai', 'opencode · T3 Code · Claude Code · Cursor · Codex'],
+  [
+    'ai',
+    <>
+      opencode · T3 Code · Claude Code · Cursor · Codex ·{' '}
+      <Link href='https://www.narulabs.co/'>Naru Labs</Link>
+    </>,
+  ],
   [
     'stack',
     'Vite + React · Vue · Laravel · Convex · TS · Tailwind · Postgres · Vercel · Cloudflare · AWS',
   ],
-  ['hardware', 'Neo60 CU (HHKB) · Cherry MX Black · DCS · MX Master 3S'],
+  ['hardware', <KeyboardPlayground key='hardware' />],
 ];
-
-const navClass = 'hover:text-(--color-accent) transition-colors';
 
 export default function Home() {
   return (
-    <div className='min-h-[calc(100dvh-5rem)] flex flex-col justify-center space-y-12'>
-      <section>
-        <Prompt cmd='whoami' caret />
-        <h1 className='text-2xl sm:text-3xl font-semibold tracking-tight mb-2'>
+    <div className='space-y-20 sm:space-y-24'>
+      <section aria-labelledby='intro-heading' className='max-w-[68ch] pt-4 sm:pt-10'>
+        <p className='mb-3 text-sm text-(--color-dim)'>Austin, Texas</p>
+        <h1 id='intro-heading' className='text-3xl sm:text-4xl font-semibold tracking-[-0.035em] leading-tight'>
           <Link href='https://opencv.app/@sean'>Sean Gil</Link>
         </h1>
-        <p className='text-(--color-dim) text-sm mb-3'>
-          software engineer · technical consultant · army veteran
+        <p className='mt-6 text-base sm:text-lg leading-relaxed text-(--color-fg)'>
+          I&rsquo;m a software engineer, technical consultant, and Army veteran. I
+          build resilient infrastructure for{' '}
+          <Link href='https://dollarwise.com'>DollarWise</Link> at Hammer Media.
         </p>
-        <p className='leading-relaxed text-(--color-fg)'>
-          Building resilient, scalable infrastructure for{' '}
-          <Link href='https://dollarwise.com'>DollarWise</Link> @ Hammer Media.
-          Based in Austin, TX.
+        <p className='mt-4 text-base leading-relaxed text-(--color-dim)'>
+          I also build my own tooling for coding agents through{' '}
+          <Link href='https://www.narulabs.co/f'>Naru Labs</Link>.
         </p>
       </section>
 
-      <section>
-        <Prompt cmd='ls ~/tools' />
-        <p className='text-(--color-dim) text-sm mb-4'>
-          I build my own tooling for coding agents &mdash;{' '}
-          <Link href='https://www.narulabs.co/f'>Naru Labs ↗</Link>
-        </p>
-        <dl className='font-mono text-sm'>
-          {tools.map(([key, value]) => (
-            <div
-              key={key}
-              className='flex items-baseline gap-4 py-1 border-b border-(--color-border) last:border-b-0'
-            >
-              <dt className='text-(--color-dim) uppercase tracking-wider w-[12ch] shrink-0'>
-                {key}
-              </dt>
-              <dd className='text-(--color-fg)'>{value}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+      <SelectedProjects />
 
-      <section>
-        <Prompt cmd='cat work.log' />
-        <dl className='font-mono text-sm'>
-          {work.map((w, i) => (
-            <div
-              key={i}
-              className='flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-4 py-2 border-b border-(--color-border) last:border-b-0'
-            >
-              <dt className='text-(--color-dim) tabular-nums sm:w-[8ch] shrink-0'>
+      <section aria-labelledby='work-heading'>
+        <div className='section-heading'>
+          <h2 id='work-heading' className='text-xl font-semibold tracking-tight'>
+            Work
+          </h2>
+          <p className='text-sm text-(--color-dim)'>2011—present</p>
+        </div>
+        <ol className='work-list'>
+          {work.map((w) => (
+            <li key={`${w.year}-${w.org}`} className='work-item'>
+              <time className='work-year tabular-nums text-sm text-(--color-dim)'>
                 {w.year}
-              </dt>
-              <dd className='text-(--color-fg)'>
-                {w.role}
-                <span className='text-(--color-dim)'> @ </span>
+              </time>
+              <div className='min-w-0'>
                 <CompanyPopover name={w.org} blurb={w.blurb} />
-              </dd>
+                <p className='mt-1 text-sm leading-relaxed text-(--color-dim)'>
+                  {w.role}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section aria-labelledby='tools-heading'>
+        <div className='section-heading'>
+          <h2 id='tools-heading' className='text-xl font-semibold tracking-tight'>
+            Tools I use
+          </h2>
+          <p className='text-sm text-(--color-dim)'>A current snapshot</p>
+        </div>
+        <dl className='tools-list text-sm'>
+          {tools.map(([key, value]) => (
+            <div key={key} className='tool-row'>
+              <dt className='text-(--color-dim)'>{key}</dt>
+              <dd className='leading-relaxed text-(--color-fg)'>{value}</dd>
             </div>
           ))}
         </dl>
-      </section>
-
-      <section className='flex items-center justify-between text-sm text-(--color-dim)'>
-        <nav className='flex items-center gap-4'>
-          <a
-            href='https://github.com/sean35mm'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={navClass}
-          >
-            github
-          </a>
-          <a
-            href='https://www.linkedin.com/in/seanhgil/'
-            target='_blank'
-            rel='noopener noreferrer'
-            className={navClass}
-          >
-            linkedin
-          </a>
-          <NextLink href='/blog' className={navClass}>
-            blog
-          </NextLink>
-        </nav>
-        <ModeToggle />
       </section>
     </div>
   );
